@@ -1,0 +1,39 @@
+Package: detectconf
+Title: Detection Confidence for Invasive Species Records from GBIF
+Version: 0.0.1
+Authors@R: 
+    person("Eva", "Benavides Rios",
+           email = "eva.benavides.rios@gmail.com",
+           role = c("aut", "cre"))
+Description: A prototype framework for interpreting novel invasion signals
+    in GBIF occurrence records. DetectConf models where the observation
+    system would be expected to detect a species if it were present,
+    producing a reliability map of the observation system itself rather
+    than a habitat suitability surface.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends:
+    R (>= 4.0.0)
+Imports:
+    data.table,
+    terra,
+    sf,
+    rgbif,
+    embarcadero,
+    dbscan,
+    fields,
+    matrixStats,
+    geodata
+Suggests:
+    knitr,
+    rmarkdown,
+    ggplot2,
+    pROC,
+    modEvA,
+    tidyterra,
+    rnaturalearth
+VignetteBuilder: knitr
+URL: https://github.com/Evandula/DetectConf-Asclepias_syriaca
+BugReports: https://github.com/Evandula/DetectConf-Asclepias_syriaca/issues

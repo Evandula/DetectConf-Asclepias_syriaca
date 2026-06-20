@@ -1,0 +1,19 @@
+# R workspace files
+.Rhistory
+.RData
+.Rproj.user/
+.Ruserdata
+.Renviron
+
+# Local scratch and temp folders
+local_scratch/
+gbif_temp/
+Effort_accum1/
+*.zip
+
+# Build artefacts
+*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
