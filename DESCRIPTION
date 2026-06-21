@@ -1,39 +1,46 @@
-Package: detectconf
-Title: Detection Confidence for Invasive Species Records from GBIF
-Version: 0.0.1
-Authors@R: 
+Package: DetectConf
+Title: Probabilistic Confidence Surfaces for Invasive Species GBIF Records
+Version: 0.1.0
+Authors@R:
     person("Eva", "Benavides Rios",
            email = "eva.benavides.rios@gmail.com",
            role = c("aut", "cre"))
-Description: A prototype framework for interpreting novel invasion signals
-    in GBIF occurrence records. DetectConf models where the observation
-    system would be expected to detect a species if it were present,
-    producing a reliability map of the observation system itself rather
-    than a habitat suitability surface.
+Description: A prototype R framework for interpreting detection confidence
+    in GBIF invasive species occurrence records. DetectConf produces a
+    reliability map of the observation system — shifting the question from
+    "where can the species establish?" to "where would we have seen it if
+    it were there?" The framework models the observation process rather
+    than habitat suitability, treating sampling bias as informative
+    structure rather than noise to be corrected. A Bayesian Additive
+    Regression Trees model is fit to presence cells and pseudo-absences
+    drawn from invasion-front envelopes, with predictors including
+    effort intensity, taxonomic relevance, recorder dominance, temporal
+    coverage, coordinate uncertainty, spatial corroboration of nearby
+    records, and national-level introduction priors from the SInAS
+    database (Seebens et al. 2017). Demonstrated on Asclepias syriaca
+    in Belgium for the GBIF Ebbe Nielsen Challenge 2026.
 License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
 Depends:
     R (>= 4.0.0)
 Imports:
     data.table,
     terra,
     sf,
-    rgbif,
-    embarcadero,
-    dbscan,
     fields,
+    dbscan,
+    countrycode,
+    geodata,
+    rgbif,
+    dbarts,
+    pROC,
+    modEvA,
     matrixStats,
-    geodata
+    usdm
 Suggests:
     knitr,
     rmarkdown,
-    ggplot2,
-    pROC,
-    modEvA,
-    tidyterra,
-    rnaturalearth
-VignetteBuilder: knitr
+    testthat (>= 3.0.0)
 URL: https://github.com/Evandula/DetectConf-Asclepias_syriaca
 BugReports: https://github.com/Evandula/DetectConf-Asclepias_syriaca/issues
+RoxygenNote: 7.3.1
