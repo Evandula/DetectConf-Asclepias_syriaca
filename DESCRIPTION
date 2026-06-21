@@ -16,8 +16,8 @@ Description: A prototype R framework for interpreting detection confidence
     drawn from invasion-front envelopes, with predictors including
     effort intensity, taxonomic relevance, recorder dominance, temporal
     coverage, coordinate uncertainty, spatial corroboration of nearby
-    records, and national-level introduction priors from the SInAS
-    database (Seebens et al. 2017). Demonstrated on Asclepias syriaca
+    records, and national-level introduction priors from the SInAS 3.1.1
+    database (Gomez-Suarez et al. 2025). Demonstrated on Asclepias syriaca
     in Belgium for the GBIF Ebbe Nielsen Challenge 2026.
 License: MIT + file LICENSE
 Encoding: UTF-8

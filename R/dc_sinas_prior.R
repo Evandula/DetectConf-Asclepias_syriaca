@@ -58,10 +58,13 @@
 #' support it.
 #'
 #' @references
-#' Seebens, H., Blackburn, T. M., Dyer, E. E., et al. (2017). No
-#' saturation in the accumulation of alien species worldwide.
-#' \emph{Nature Communications}, 8, 14435.
-#' \doi{10.1038/ncomms14435}
+#' Gómez-Suárez, M., Laeseke, P., & Seebens, H. (2025). A global dataset of
+#' native and alien distributions of alien species. \emph{Scientific Data},
+#' 12, 1914. \doi{10.1038/s41597-025-06379-6}
+#'
+#' Seebens, H., & Gómez-Suárez, M. (2025). SInAS: A global dataset of
+#' native and alien distributions of alien species [Data set]. Zenodo.
+#' \doi{10.5281/zenodo.5562891}
 #'
 #' @importFrom data.table fread setDT
 #' @importFrom terra rasterize vect writeRaster
