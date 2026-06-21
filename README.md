@@ -25,7 +25,7 @@ This ambiguity is increased by a scale mismatch. Invasion status is typically ev
 
 The workflow reframes the central question from *"where can the species establish?"* to *"where would we have seen the species if it were there?"* It does not produce a habitat suitability surface; it produces a spatially explicit assessment of detectability context.
 
-For each grid cell, DetectConf reconstructs the observation process from GBIF metadata alone — without requiring repeated structured surveys or formal estimation of detection probability. The framework quantifies:
+For each grid cell, DetectConf reconstructs the observation process from GBIF metadata alone, without requiring repeated structured surveys or formal estimation of detection probability. The framework quantifies:
 
 - **Sampling intensity** (total records, unique events, recorder counts)
 - **Taxonomic composition of recording activity** ‒ what was recorded in each cell, not the recorders' identification skills
