@@ -17,7 +17,7 @@ The map above shows the headline output for the demonstration species: every gri
 
 ## What problem is this addressing?
 
-Early detection and interpretation of invasive species records are key challenges in biodiversity monitoring and management. The rapid increase in occurrence data, especially from GBIF and citizen science, has produced more apparent invasion signals. But these records come from observation systems with uneven sampling, observer bias, and delayed data mobilisation, which makes it difficult to determine whether a new occurrence reflects a true biological event or a data artefact. A "first record" may result from a new incursion, a spatial expansion, delayed reporting, or a misidentification — and each carries different management implications.
+Early detection and interpretation of invasive species records are key challenges in biodiversity monitoring and management. The rapid increase in occurrence data, especially from GBIF and citizen science, has produced more apparent invasion signals. But these records come from observation systems with uneven sampling, observer bias, and delayed data mobilisation, which makes it difficult to determine whether a new occurrence reflects a true biological event or a data artefact. A "first record" may result from a new incursion, a spatial expansion, delayed reporting, or a misidentification ‒ and each carries different management implications.
 
 This ambiguity is increased by a scale mismatch. Invasion status is typically evaluated at the national level, where legal authority and response frameworks are organised. Observation systems, however, operate at regional and local scales, shaped by recorder distribution, taxonomic focus, and temporal activity patterns. Addressing this gap requires methods that can interpret nationally flagged novel records and identify, within the confirmed national invasion front, the areas where new occurrences would actually be reliably detected.
 
@@ -28,7 +28,7 @@ The workflow reframes the central question from *"where can the species establis
 For each grid cell, DetectConf reconstructs the observation process from GBIF metadata alone — without requiring repeated structured surveys or formal estimation of detection probability. The framework quantifies:
 
 - **Sampling intensity** (total records, unique events, recorder counts)
-- **Taxonomic composition of recording activity** — what was recorded in each cell, not the recorders' identification skills
+- **Taxonomic composition of recording activity** ‒ what was recorded in each cell, not the recorders' identification skills
 - **Temporal structure of effort** (years with records, recording span, recent activity)
 - **Observer concentration** (dominance of any single recorder)
 - **Spatial corroboration** (density of confirmed presences in the surrounding neighbourhood)
@@ -44,9 +44,9 @@ Pseudo-absences are not drawn from random background locations. They are constra
 
 The detection-confidence surface supports three distinct interpretations:
 
-- **Credible detection** — high confidence and an existing record. Supports the credibility of the occurrence as a genuine detection requiring a rapid response.
-- **Monitoring priority** — high confidence, no record, but suitable habitat. Identifies well-monitored cells for periodic reassessment as the invasion front progresses.
-- **Surveillance gap** — low confidence within suitable habitat. Identifies places where apparent absence likely reflects limited detectability rather than true absence, and where surveillance investment could be prioritised. This is the output that conventional species distribution models cannot deliver, because they map environmental suitability without assessing whether the underlying data are sufficient to support that inference.
+- **Credible detection** ‒ high confidence and an existing record. Supports the credibility of the occurrence as a genuine detection requiring a rapid response.
+- **Monitoring priority** ‒ high confidence, no record, but suitable habitat. Identifies well-monitored cells for periodic reassessment as the invasion front progresses.
+- **Surveillance gap** ‒ low confidence within suitable habitat. Identifies places where apparent absence likely reflects limited detectability rather than true absence, and where surveillance investment could be prioritised. This is the output that conventional species distribution models cannot deliver, because they map environmental suitability without assessing whether the underlying data are sufficient to support that inference.
 
 ## Performance on the demonstration species
 
