@@ -4,7 +4,7 @@
 
 DetectConf is a prototype R package that estimates how confident we should be in a given GBIF occurrence as a genuine invasive species detection, given the climate plausibility of the location, the local sampling context, the taxonomic composition of nearby recording activity, and the broader invasion context. Rather than predicting where a species could establish, it generates a reliability map of the observation system itself.
 
-The framework was developed for the [GBIF Ebbe Nielsen Challenge 2026](https://www.gbif.org/) and is demonstrated on *Asclepias syriaca* (common milkweed) in Belgium.
+The framework was developed for the [2026 GBIF Ebbe Nielsen Challenge](https://www.gbif.org/news/3DyM3tK5wgYipqyaHwG2c2/2026-ebbe-nielsen-challenge-open-for-submissions) and is demonstrated on *Asclepias syriaca* (common milkweed) in Belgium.
 
 <p align="center">
   <img src="man/figures/belgium_detection_confidence.jpg" width="80%"
