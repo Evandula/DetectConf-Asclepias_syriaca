@@ -11,7 +11,7 @@ The framework was developed for the [2026 GBIF Ebbe Nielsen Challenge](https://w
        alt="Detection-confidence surface for Asclepias syriaca in Belgium.">
 </p>
 
-The map above shows the headline output for the demonstration species: every grid (10x10km) cell in Belgium is assigned a detection-confidence score between 0 and 1. High-confidence cells (yellow) are places where, given the local observation system, we would expect *A. syriaca* to have been recorded if it were present. Low-confidence cells (dark blue) are places where apparent absence carries little information — the species may genuinely be absent, or the observation system may simply not have looked closely enough.
+The map above shows the headline output for the demonstration species: every grid (10x10km) cell in Belgium is assigned a detection-confidence score between 0 and 1. High-confidence cells (yellow) are places where, given the local observation system, we would expect *A. syriaca* to have been recorded if it were present. Low-confidence cells (dark blue) are places where apparent absence carries little information: the species may genuinely be absent (this could be corroborated with a suitability map), or alternatively, the observation system may simply not have a representative sample to support detection.
 
 ---
 
