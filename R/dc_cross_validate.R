@@ -1,7 +1,7 @@
 #' Spatial buffer cross-validation for DetectConf models
 #'
-#' Wraps sections 26-27 of the DetectConf pipeline. Implements
-#' leave-one-buffer-out spatial cross-validation: for each fold, a
+#' Implements leave-one-buffer-out spatial
+#' cross-validation: for each fold, a
 #' randomly selected presence cell becomes the focal point, all
 #' observations within \code{buffer_km} are held out as the test set,
 #' and the remaining observations train the model. Quality is measured
@@ -159,9 +159,9 @@ dc_cross_validate <- function(model_df,
 
     roc_i   <- pROC::roc(test_df$detected, test_preds, quiet = TRUE)
     auc_i   <- as.numeric(pROC::auc(roc_i))
-    boyce_i <- tryCatch(
+    boyce_i <- suppressWarnings(tryCatch(
       modEvA::Boyce(obs = test_df$detected, pred = test_preds)[["Boyce"]],
-      error = function(e) NA_real_)
+      error = function(e) NA_real_))
     coords_i <- pROC::coords(roc_i, "best",
                              best.method = "closest.topleft",
                              ret = c("threshold", "sensitivity",
