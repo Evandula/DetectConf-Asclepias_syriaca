@@ -1,6 +1,6 @@
 #' Build a national detection-confidence projection surface
 #'
-#' Wraps section 28 of the DetectConf pipeline. Computes all effort and
+#' Computes all effort and
 #' prior variables for every grid cell within a target country, ready
 #' for prediction by \code{dc_predict}. Implements adaptive temporal
 #' binning: a single GBIF download is requested per year bin, and any
