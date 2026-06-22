@@ -50,15 +50,16 @@ The detection-confidence surface supports three distinct interpretations:
 
 ## Performance on the demonstration species
 
-Spatial buffer leave-one-out cross-validation on *Asclepias syriaca* (20 folds, ~150 km buffer):
+Spatial buffer leave-one-out cross-validation on *Asclepias syriaca* (9 unique focal cells, 100 km buffer):
 
-| Metric            | Mean |
-|-------------------|-----:|
-| AUC               | 0.985 |
-| TSS               | 0.870 |
-| Boyce continuous index | 0.965 |
-| Type I error      | 0.053 |
-| Type II error     | 0.076 |
+| Metric            | Mean  | Range       |
+|-------------------|------:|:------------|
+| AUC               | 0.946 | 0.78 – 1.00 |
+| TSS               | 0.849 | 0.60 – 1.00 |
+| Boyce continuous index | 0.638 | 0.13 – 0.85 |
+| Type I error      | 0.076 | 0.00 – 0.21 |
+| Type II error     | 0.074 | 0.00 – 0.22 |
+
 
 ## Installation
 
