@@ -76,16 +76,4 @@ plot(plot_r,
      col  = hcl.colors(50, "viridis"))
 plot(st_geometry(country_sf), add = TRUE, border = "grey20", lwd = 0.5)
 
-## ── 5. Tripartition (extension beyond core claims) ──────────────
-# Three operational outputs anchored on detection confidence:
-#   credible_detection   : high confidence + record exists
-#   monitoring_priority  : high confidence + no record (suitable)
-#   surveillance_gap     : low confidence within the projection area
 
-belgium_surface[, status := fcase(
-  detect_confidence >= 0.7 & zero_effort == FALSE, "credible_detection",
-  detect_confidence >= 0.7 & zero_effort == TRUE,  "monitoring_priority",
-  detect_confidence <  0.4,                         "surveillance_gap",
-  default = "intermediate")]
-
-print(belgium_surface[, .N, by = status])
