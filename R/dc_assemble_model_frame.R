@@ -1,6 +1,6 @@
 #' Assemble the BART model frame
 #'
-#' Wraps section 24 of the DetectConf pipeline. Combines presence cells
+#' Combines presence cells
 #' and pseudo-absence cells into a single data.table ready for BART
 #' fitting, attaching climate, effort, knowledge-prior, and spatial
 #' corroboration variables to each row. Imputes missing values, drops
