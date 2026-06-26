@@ -1,6 +1,6 @@
 #' Build national-level priors from the SInAS database
 #'
-#' Wraps section 22B of the DetectConf pipeline. Filters the Seebens et
+#' Filters the Seebens et
 #' al. (2017) SInAS database to records of the focal species marked as
 #' introduced and present, then aggregates per country into two
 #' rasterised priors:
