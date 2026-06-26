@@ -1,6 +1,7 @@
 # DetectConf
 
 **A Framework for Interpreting Novel Invasion Signals Using GBIF Data**
+
 DetectConf is a prototype R package that helps interpret new GBIF occurrences of invasive species by estimating, for each location, how reliably the local observation system could have detected the species. Rather than predicting where a species could establish, it produces a reliability map of the observation system itself.
 
 The framework was developed for the [2026 GBIF Ebbe Nielsen Challenge](https://www.gbif.org/news/3DyM3tK5wgYipqyaHwG2c2/2026-ebbe-nielsen-challenge-open-for-submissions) and is demonstrated on *Asclepias syriaca* (common milkweed, native to North America and invasive in parts of Europe) in Belgium.
