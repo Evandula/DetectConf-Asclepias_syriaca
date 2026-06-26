@@ -83,7 +83,7 @@ The eight functions, in dependency order:
 
 ### Expertise is taxon-dependent, not rank-dependent
 
-A central design decision in DetectConf is that taxonomic expertise does not operate at a single universal taxonomic rank. Different organism groups are observed, recorded, and identified in different ways, and the taxonomic breadth at which expertise meaningfully affects detectability varies accordingly.
+A central design decision in DetectConf is that taxonomic-relevant activity does not operate at a single universal taxonomic rank. Different organism groups are observed, recorded, and identified in different ways, and this affects detectability accordingly.
 
 For vertebrates, expertise and sampling practice are often structured at the class level (e.g. fishes, birds, herpetofauna), reflecting distinct survey traditions and observer communities. For plants, formal taxonomic class does not map well onto observer behaviour. Botanists typically operate across multiple classes, and detectability is more strongly driven by morphology, environment, and regional floristic knowledge than by higher-level taxonomy.
 
@@ -183,7 +183,7 @@ For the conceptual grounding of treating sampling bias as informative structure 
 
 > Isaac, N. J. B., & Pocock, M. J. O. (2015). Bias and information in biological records. *Biological Journal of the Linnean Society*, 115, 522–531. https://doi.org/10.1111/bij.12532
 
-For the ignorance-map lineage:
+For the ignorance-map background:
 
 > Rocchini, D., Hortal, J., Lengyel, S., Lobo, J. M., Jiménez-Valverde, A., Ricotta, C., Bacaro, G., & Chiarucci, A. (2011). Accounting for uncertainty when mapping species distributions: The need for maps of ignorance. *Progress in Physical Geography*, 35(2), 211–226. https://doi.org/10.1177/0309133311399491
 
