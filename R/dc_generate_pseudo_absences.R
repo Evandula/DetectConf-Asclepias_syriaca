@@ -1,6 +1,6 @@
 #' Generate pseudo-absences within invasion-front envelopes
 #'
-#' Wraps section 23 of the DetectConf pipeline. Performs global DBSCAN
+#' Performs global DBSCAN
 #' clustering on presence points to identify natural invasion fronts,
 #' draws a buffered convex hull around each cluster, and samples
 #' pseudo-absences from candidate cells inside those hulls.
