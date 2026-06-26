@@ -2,14 +2,7 @@
 #'
 #' Computes the spatial corroboration variable used by DetectConf as a
 #' predictor: for each target cell, the number of \emph{other} presence
-#' cells within \code{radius_km}. Replaces the older
-#' \code{log_nearest_dist_km} variable, which produced circular logic
-#' (presence cells were trivially close to themselves).
-#'
-#' This variable is not circular when computed for target cells distinct
-#' from the reference presence set, and is mildly circular but
-#' informative when computed for presence cells (each presence cell
-#' counts \emph{neighbours}, not itself).
+#' cells within \code{radius_km}. 
 #'
 #' @param target_cells Integer vector of \code{cell_id} values for which
 #'   to compute the count. May be the presence cells, pseudo-absence
