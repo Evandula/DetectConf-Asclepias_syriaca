@@ -1,6 +1,6 @@
 #' Extract per-cell effort statistics from a GBIF download zip
 #'
-#' Workhorse function of the DetectConf pipeline. Streams a GBIF
+#' Core function of the DetectConf pipeline. Streams a GBIF
 #' SIMPLE_CSV zip through 7-Zip without unzipping to disk, applies the
 #' standard cleaning rules (focal-species removal, focal-observer
 #' exclusion, coordinate validation, grid-cell assignment), tags each
@@ -8,10 +8,10 @@
 #' effort statistics within one or more year bins.
 #'
 #' Used identically in three pipeline contexts: (1) accumulating effort
-#' for cells in the presence buffer (section 20 of the pipeline);
+#' for cells in the presence buffer;
 #' (2) extracting effort for pseudo-absence cells per cluster
 #' (section 23); and (3) computing effort for projection-region cells
-#' such as Belgium (section 28). The aggregation logic is fixed so that
+#' for the country/location of interest. The aggregation logic is fixed so that
 #' all three contexts produce mutually compatible variables.
 #'
 #' @param zip_path Path to a GBIF SIMPLE_CSV zip download.
