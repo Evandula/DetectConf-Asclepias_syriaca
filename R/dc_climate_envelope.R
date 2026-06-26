@@ -1,6 +1,6 @@
 #' Build classified climate envelope raster
 #'
-#' Wraps sections 1-13 of the DetectConf pipeline. Constructs a classified
+#' Constructs a classified
 #' raster (values 0/1/2/3) describing the relationship between every grid
 #' cell on Earth and the species' native climate envelope:
 #'
