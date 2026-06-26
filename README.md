@@ -43,7 +43,7 @@ DetectConf extends the ignorance-map tradition ([Rocchini et al., 2011](https://
 Pseudo-absences are not drawn from random background locations. They are restricted to the geographic envelope of active invasion fronts, identified through density-based spatial clustering (DBSCAN) of the focal species' occurrence points in its introduced range. The model therefore learns what separates detected from non-detected locations within the climatically plausible space (defined by the native-range envelope) and where the observation system has been active.
 
 <p align="center">
-  <img src="figures/DBASCAN_pseudoabscences.png" width="80%"
+  <img src="figures/DBASCAN_pseudoabscences.jpg" width="80%"
        alt="Pseudo-absence locations identified by DBSCAN clustering of the focal species' occurrence points in its introduced range.">
 </p>
 
