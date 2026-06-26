@@ -57,8 +57,7 @@ The detection-confidence surface supports three distinct interpretations:
 
 ## Performance on the demonstration species
 
-Spatial buffer cross-validation on *Asclepias syriaca* (20 folds across 9 unique focal cells, [BUFFER_KM] km buffer):
-
+Spatial buffer cross-validation on *Asclepias syriaca* (9 folds). The buffer radius is determined dynamically as 10% of the species' Minimum Convex Polygon radius, clamped between 100 km and 2000 km, so the buffer scales with range size.
 | Metric                  |   Mean |
 |-------------------------|-------:|
 | AUC                     |  0.947 |
@@ -90,9 +89,21 @@ For vertebrates, expertise and sampling practice are often structured at the cla
 
 DetectConf defines taxon-relevant effort using expertise domains chosen to reflect recording practice rather than formal rank. In the current implementation for terrestrial systems, plant expertise is represented using two broad, observationally coherent groups: terrestrial vascular plants and non-vascular plants (bryophytes).
 
+### Engineering considerations
+
+The pipeline is built around a set of deliberate design decisions, shaped by challenges such as variable harmonisation and circularity, that safeguard against methodological pitfalls in modelling workflows and failures in managing high-volume data.
+
+-**Temporal bins for presence data retrieval.** Several time windows are used to partition GBIF downloads. The bins are deliberately unequal: broad early bins (1800–2005) cover low-volume historical records, while narrower recent bins (2019–2020, 2021–2022) accommodate the exponential growth in GBIF records since 2015. This approach keeps each download at a manageable size.
+- **Temporal harmonisation.** Pseudo-absence and projection-area effort data use the same temporal bin structure as the presence-side effort surface, so variables like recording span and recent activity remain directly comparable across the three roles a cell can play in the model.
+- **Variable consistency.** Every predictor used by the model is computed with the same code path across the training frame, the prediction frame, and the national projection surface. This prevents mismatches that would corrupt projections.
+- **Circularity prevention.** Records of the focal species are removed before computing effort variables, so a cell with 200 *A. syriaca* records is not credited with 200 independent observation events. Observers who recorded the focal species in a given cell are also excluded from that cell's effort count, but remain in other cells where they recorded different taxa.
+- **Crash resilience.** Each computationally expensive step writes individual checkpoint files, so the pipeline can resume from any interruption without reprocessing completed steps.
+- **Model serialisation.** BART models are saved with `mod$fit$storeState()` before `saveRDS`, preserving the C++ tree state. Without this, a reloaded model returns 0.5 uniformly on predict.
+
+  
 ### Computational cost
 
-The pipeline is data-intensive in its upstream steps (GBIF taxonomic-group downloads, effort aggregation, climate envelope construction) and computationally light in its downstream steps (model prediction and projection). Once trained, the model and the country-level projection surface can be cached and re-used, which is why the demonstration on *Asclepias syriaca* in Belgium runs end-to-end in minutes from cached artefacts, even though the full pipeline from raw GBIF data is intensive.
+The pipeline is data-intensive in its upstream steps (GBIF taxonomic-group downloads, effort aggregation) and computationally light in its downstream steps (model prediction and projection). Once trained, the model and the country-level projection surface can be cached and re-used, which is why the demonstration on *Asclepias syriaca* in Belgium runs end-to-end in minutes from cached artefacts, even though the full pipeline from raw GBIF data is intensive.
 
 ## Installation
 
